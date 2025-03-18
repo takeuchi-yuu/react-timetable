@@ -1,0 +1,46 @@
+.counter {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  place-content: center;
+  grid-template:
+    ". value ." 64px
+    "minus . plus" 32px
+    /1fr 100px 1fr;
+}
+
+.minus,
+.plus {
+  display: grid;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.minus {
+  grid-area: minus;
+  &:hover {
+    background-color: #35b0be;
+  }
+}
+
+.plus {
+  grid-area: plus;
+  &:hover {
+    background-color: #be3535;
+  }
+}
+
+.value {
+  display: grid;
+  grid-area: value;
+}
