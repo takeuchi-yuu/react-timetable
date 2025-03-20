@@ -1,11 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Counter from "./Counter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+function Home() {
+  return (
+    <div className="Home">
+      <header className="Home-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello, World!</p>
         <a
